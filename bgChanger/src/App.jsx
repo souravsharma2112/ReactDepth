@@ -1,39 +1,24 @@
 
 // import { useState } from 'react'
+import { useState } from 'react';
 import './App.css'
 
 function App() {
-  function setColor() {
-    document.body.style.backgroundColor = "red";
-    const mainUL= document.querySelector("#mainUL");
-    console.log(mainUL.childNodes[0].children[0])
-  }
+  const [bgColor , setBgColor] = useState("")
+  document.body.style.backgroundColor = bgColor;
+
   return (
     <>
       <div className="container">
-          <ul id="mainUL" className="flex gap-4">
-            <li  className="boxes">
-              <button onClick={setColor} className="bg-red-600">Red</button>
-            </li>
-            <li className="boxes ">
-              <button className="bg-yellow-300 text-black">Yellow</button>
-            </li>
-            <li className="boxes">
-              <button className="bg-green-400">Green</button>
-            </li>
-            <li className="boxes">
-              <button className="bg-blue-600">Blue</button>
-            </li>
-            <li className="boxes">
-              <button className="bg-pink-500">Pink</button>
-            </li>
-            <li className="boxes">
-              <button className="bg-purple-500">Purple</button>
-            </li>
-            <li className="boxes">
-              <button className="bg-gray-400">Grey</button>
-            </li>
-          </ul>
+          <div id="mainUL" className="flex gap-4">
+              <button onClick={()=>{setBgColor("red")}} className="bg-red-600">Red</button>
+              <button onClick={()=>{setBgColor("yellow")}} className="bg-yellow-300 text-black">Yellow</button>
+              <button onClick={()=>{setBgColor("green")}} className="bg-green-400">Green</button>
+              <button onClick={()=>{setBgColor("blue")}} className="bg-blue-600">Blue</button>
+              <button onClick={()=>{setBgColor("#f71cff")}} className="bg-pink-500">Pink</button>
+              <button onClick={()=>{setBgColor("purple")}} className="bg-purple-500">Purple</button>
+              <button onClick={()=>{setBgColor("darkgray")}} className="bg-gray-400">Grey</button>
+          </div>
       </div>
     </>
   )
