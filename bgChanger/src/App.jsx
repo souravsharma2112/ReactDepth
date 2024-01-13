@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="container">
           <div id="mainUL" className="flex gap-4">
-              <button onClick={()=>{setBgColor("red")}} className="bg-red-600">Red</button>
+              <button onClick={()=>{setBgColor("#ff0000")}} className="bg-red-600">Red</button>
               <button onClick={()=>{setBgColor("yellow")}} className="bg-yellow-300 text-black">Yellow</button>
               <button onClick={()=>{setBgColor("green")}} className="bg-green-400">Green</button>
               <button onClick={()=>{setBgColor("blue")}} className="bg-blue-600">Blue</button>
